@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Вопрос 1
+
+        var prime = [2],
+            num = 2;
+        while (num <= 100) {
+            var numcheck = 1;
+            for (var i = 0; i < prime.length; i++) {
+                if (num % prime[i] === 0) {
+                    numcheck = 0;
+                }
+            }
+            if (numcheck === 1) {
+                prime.push(num);
+            }
+            num++;
+        }
+        console.log(prime);
+
+        //Вопрос 2
+
+        var a = 0;
+        do {
+            if (a % 2 !== 0) {
+                console.log(a + ' — нечетное число');
+            }
+            else if (a !== 0 && a % 2 === 0) {
+                console.log(a + ' — четное число');
+            }
+            else {
+                console.log(a + ' — это ноль');
+            }
+            a++;
+        } while (a < 11);
+
+        //Вопрос 3
+
+        for (var a = 0; a < 10; console.log(a++)) { }
+
+        //Вопрос 4
+
+        var x = '\nx';
+        for (var a = 20; a--;) {
+            console.log(x);
+            x = x + 'x';
+        }
+
+    </script>
+
+</body>
+
+</html>
